@@ -6,6 +6,7 @@ import androidx.core.app.NotificationCompat;
 import android.annotation.TargetApi;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -131,11 +132,13 @@ public class MyCountDownTimer extends CountDownTimer {
             channel.setDescription("20-20 channel");
             mNotificationManager.createNotificationChannel(channel);
         }
+
         NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(getApplicationContext(), "YOUR_CHANNEL_ID")
                 .setSmallIcon(R.drawable.icon_eye) // notification icon
                 .setContentTitle(title) // title for notification
                 .setContentText(message)// message for notification
                 .setAutoCancel(true); // clear notification after click
+
 //            Intent intent = new Intent(getApplicationContext(), ACTIVITY_NAME.class);
 //            PendingIntent pi = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 //            mBuilder.setContentIntent(pi);

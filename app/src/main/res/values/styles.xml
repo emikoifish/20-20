@@ -6,6 +6,19 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/backgroundColor</item>
+        <item name="android:textColorPrimary">@color/textColor</item>
+        <item name="android:colorButtonNormal">@color/colorPrimary</item>
+        <item name="android:textColorPrimaryInverse">@color/backgroundColor</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+        <item name="colorControlActivated">@color/textColor</item>
+        <item name="colorButtonNormal">@color/colorPrimary</item>
+        <item name="editTextColor">@color/textColor</item>
+        <item name="android:editTextColor">@color/textColor</item>
+<!--        <item name="android:textColorHint">@color/textColor</item>-->
+<!--        <item name="android:titleTextColor">@color/textColor</item>-->
+<!--        <item name="textColorSearchUrl">@color/textColor</item>-->
+<!--        <item name="android:keyTextColor">@color/textColor</item>-->
     </style>
 
 </resources>

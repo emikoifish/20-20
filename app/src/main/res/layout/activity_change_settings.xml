@@ -8,12 +8,14 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="397dp"
-        android:layout_height="49dp"
+        android:layout_width="345dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
         android:layout_marginTop="36dp"
         android:text="Settings"
+        android:textColor="@color/textColor"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -39,6 +41,7 @@
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="seconds"
+        android:textColorHint="@color/textColor"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileName" />
@@ -58,6 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Alert"
+            android:textColor="@color/textColor"
             android:onClick="onNotifyButtonClicked"/>
 
         <RadioButton
@@ -65,6 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Banner"
+            android:textColor="@color/textColor"
             android:onClick="onNotifyButtonClicked"/>
 
         <RadioButton
@@ -73,6 +78,7 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="Background"
+            android:textColor="@color/textColor"
             android:onClick="onNotifyButtonClicked"/>
     </RadioGroup>
 
@@ -84,6 +90,7 @@
         android:layout_marginLeft="36dp"
         android:layout_marginTop="12dp"
         android:text="Notification Type"
+        android:textColor="@color/textColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/screenOff" />
 
@@ -95,6 +102,7 @@
         android:layout_marginLeft="36dp"
         android:layout_marginTop="32dp"
         android:text="Vibration"
+        android:textColor="@color/textColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/notify" />
 
@@ -113,21 +121,24 @@
             android:layout_height="wrap_content"
             android:checked="true"
             android:onClick="onVibrateButtonClicked"
-            android:text="None" />
+            android:text="None"
+            android:textColor="@color/textColor" />
 
         <RadioButton
             android:id="@+id/vibeShort"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onVibrateButtonClicked"
-            android:text="Short" />
+            android:text="Short"
+            android:textColor="@color/textColor" />
 
         <RadioButton
             android:id="@+id/vibeLong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onVibrateButtonClicked"
-            android:text="Long" />
+            android:text="Long"
+            android:textColor="@color/textColor" />
     </RadioGroup>
 
     <EditText
@@ -139,6 +150,7 @@
         android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="profile name"
+        android:textColorHint="@color/textColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -152,6 +164,7 @@
         android:ems="10"
         android:hint="seconds screen off"
         android:inputType="number"
+        android:textColorHint="@color/textColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText" />
 

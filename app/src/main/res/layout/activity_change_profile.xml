@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="28dp"
         android:onClick="reading"
         android:text="Reading"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,6 +27,7 @@
         android:layout_marginTop="36dp"
         android:text="Profiles"
         android:textSize="30sp"
+        android:textColor="@color/textColor"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -36,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="28dp"
         android:onClick="changeSettings"
         android:text="Create New Profile"
         app:layout_constraintStart_toStartOf="parent"

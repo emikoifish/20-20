@@ -122,8 +122,8 @@ public class MyCountDownTimer extends CountDownTimer {
         NotificationManager mNotificationManager =
                 (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
-            NotificationChannel channel = new NotificationChannel("20-20",
-                    "20-20",
+            NotificationChannel channel = new NotificationChannel("YOUR_CHANNEL_ID",
+                    "YOUR_CHANNEL_ID",
                     NotificationManager.IMPORTANCE_DEFAULT);
             channel.setDescription("20-20 channel");
             mNotificationManager.createNotificationChannel(channel);

@@ -10,7 +10,7 @@
         android:id="@+id/textView5"
         android:layout_width="397dp"
         android:layout_height="49dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:text="Settings"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -29,19 +29,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+
     <EditText
         android:id="@+id/editText"
-        android:layout_width="147dp"
-        android:layout_height="48dp"
+        android:layout_width="215dp"
+        android:layout_height="46dp"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="seconds"
         android:inputType="number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
+        app:layout_constraintTop_toBottomOf="@+id/profileName" />
 
     <RadioGroup
         android:id="@+id/notify"
@@ -82,10 +82,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="12dp"
         android:text="Notification Type"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/screenOff" />
 
     <TextView
         android:id="@+id/textView9"
@@ -104,7 +104,6 @@
         android:layout_height="130dp"
         android:layout_marginStart="36dp"
         android:layout_marginLeft="36dp"
-        android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9">
 
@@ -113,22 +112,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="None"
-            android:onClick="onVibrateButtonClicked"/>
+            android:onClick="onVibrateButtonClicked"
+            android:text="None" />
 
         <RadioButton
             android:id="@+id/vibeShort"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Short"
-            android:onClick="onVibrateButtonClicked"/>
+            android:onClick="onVibrateButtonClicked"
+            android:text="Short" />
 
         <RadioButton
             android:id="@+id/vibeLong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Long"
-            android:onClick="onVibrateButtonClicked"/>
+            android:onClick="onVibrateButtonClicked"
+            android:text="Long" />
     </RadioGroup>
+
+    <EditText
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="profile name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/screenOff"
+        android:layout_width="215dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="seconds screen off"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

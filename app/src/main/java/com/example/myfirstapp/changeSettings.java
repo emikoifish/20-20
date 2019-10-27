@@ -21,6 +21,8 @@ public class changeSettings extends AppCompatActivity {
     public static final String EXTRA_MESSAGE_Notify = "com.example.myfirstapp.notificationType";
     public static final String EXTRA_MESSAGE_Vibe = "com.example.myfirstapp.vibrateType";
     public static final String EXTRA_MESSAGE_Seconds = "com.example.myfirstapp.seconds";
+    public static final String EXTRA_MESSAGE_Profile = "com.example.myfirstapp.profile";
+    public static final String EXTRA_MESSAGE_Screen = "com.example.myfirstapp.screen";
 
     /** Called when the user taps the Send button */
     public void showTimer(View view) {
@@ -34,6 +36,23 @@ public class changeSettings extends AppCompatActivity {
             message = "20";
         }
         intent.putExtra(EXTRA_MESSAGE_Seconds, message);
+        startActivity(intent);
+
+        EditText profileText = (EditText) findViewById(R.id.profileName);
+        String profile = profileText.getText().toString();
+        if (profile.matches("")){
+            profile = "Reading";
+        }
+        intent.putExtra(EXTRA_MESSAGE_Profile, profile);
+
+        EditText screenOff = (EditText) findViewById(R.id.screenOff);
+        String screenSec = screenOff.getText().toString();
+        if (screenSec.matches("")){
+            screenSec = "5";
+        }
+        intent.putExtra(EXTRA_MESSAGE_Screen, screenSec);
+
+
         startActivity(intent);
     }
 

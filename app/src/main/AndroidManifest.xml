@@ -9,14 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".showTimer"></activity>
-        <activity
-            android:name=".changeSettings">
-
-        </activity>
-        <activity
-            android:name=".DisplayMessageActivity">
-        </activity>
+        <activity android:name=".changeProfile"></activity>
+        <activity android:name=".showTimer" />
+        <activity android:name=".changeSettings"></activity>
+        <activity android:name=".DisplayMessageActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -22,6 +22,7 @@ public class showTimer extends AppCompatActivity {
     public int counter;
     public int oldCounter;
     public showTimer.MyCountDownTimer myCountDownTimer;
+    public int screenOff;
 
 
     @Override
@@ -34,9 +35,13 @@ public class showTimer extends AppCompatActivity {
         String messageNotify = intent.getStringExtra(changeSettings.EXTRA_MESSAGE_Notify);
         String messageVibe = intent.getStringExtra(changeSettings.EXTRA_MESSAGE_Vibe);
         String messageSeconds = intent.getStringExtra(changeSettings.EXTRA_MESSAGE_Seconds);
+        String messageProfile = intent.getStringExtra(changeSettings.EXTRA_MESSAGE_Profile);
+        String messageScreen = intent.getStringExtra(changeSettings.EXTRA_MESSAGE_Screen);
+        screenOff = Integer.parseInt(messageScreen);
 
         TextView textView = findViewById(R.id.textView);
-        textView.setText("Reading");
+        Log.d("messageProfile", messageProfile);
+        textView.setText(messageProfile);
 
         //set default
         Log.d("message", messageSeconds);
@@ -60,7 +65,7 @@ public class showTimer extends AppCompatActivity {
                     if (isScreenOn == false) {
                         boolCursor++;
                     } else { // if screen is on, then reset the amount off
-                        if (boolCursor >= 5) {
+                        if (boolCursor >= screenOff) {
                             counter = 0;
                             boolCursor = 0;
                             myCountDownTimer.cancel();
@@ -150,6 +155,14 @@ public class MyCountDownTimer extends CountDownTimer {
 //        intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }
-
+    /** Called when the user taps the Send button */
+    public void changeProfile(View view) {
+        // Do something in response to button
+        Intent intent = new Intent(this, changeProfile.class);
+//        EditText editText = (EditText) findViewById(R.id.editText);
+//        String message = editText.getText().toString();
+//        intent.putExtra(EXTRA_MESSAGE, message);
+        startActivity(intent);
+    }
 
 }

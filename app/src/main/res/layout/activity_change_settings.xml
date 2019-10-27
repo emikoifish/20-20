@@ -162,7 +162,7 @@
         android:layout_marginLeft="36dp"
         android:layout_marginTop="12dp"
         android:ems="10"
-        android:hint="seconds screen off"
+        android:hint="rest time"
         android:inputType="number"
         android:textColorHint="@color/textColor"
         app:layout_constraintStart_toStartOf="parent"

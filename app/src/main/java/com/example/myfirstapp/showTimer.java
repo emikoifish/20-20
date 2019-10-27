@@ -3,52 +3,50 @@ package com.example.myfirstapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 
-import android.content.Intent;
-import android.widget.EditText;
+import android.annotation.TargetApi;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.PowerManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.annotation.TargetApi;
-import android.os.Build;
-import android.os.CountDownTimer;
 
-public class MainActivity extends AppCompatActivity {
-
-    public static final String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
+public class showTimer extends AppCompatActivity {
     public int boolCursor = 0;
     public int counter;
     public int oldCounter;
-    public MyCountDownTimer myCountDownTimer;
+    public showTimer.MyCountDownTimer myCountDownTimer;
 
-    @TargetApi(Build.VERSION_CODES.O)
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Get the Intent that started this activity and extract the string
+        Intent intent = getIntent();
+        String messageNotify = intent.getStringExtra(changeSettings.EXTRA_MESSAGE_Notify);
+        String messageVibe = intent.getStringExtra(changeSettings.EXTRA_MESSAGE_Vibe);
+        String messageSeconds = intent.getStringExtra(changeSettings.EXTRA_MESSAGE_Seconds);
 
-//         Get the Intent that started this activity and extract the string
-//        Intent intent = getIntent();
-//        String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-//
-////         Capture the layout's TextView and set the string as its text
         TextView textView = findViewById(R.id.textView);
         textView.setText("Reading");
 
         //set default
-        String message = "20";
+        Log.d("message", messageSeconds);
+        String message = messageSeconds;
 
         final TextView countTime = findViewById(R.id.countTime);
         final int amountTime = Integer.parseInt(message);
         final int amountTimeMillis = amountTime * 1000;
 
-        myCountDownTimer = new MyCountDownTimer(amountTimeMillis, 1000);
+        myCountDownTimer = new showTimer.MyCountDownTimer(amountTimeMillis, 1000);
         myCountDownTimer.start();
 
         final Handler handler = new Handler();
@@ -66,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                             counter = 0;
                             boolCursor = 0;
                             myCountDownTimer.cancel();
-                            myCountDownTimer = new MyCountDownTimer(amountTimeMillis, 1000);
+                            myCountDownTimer = new showTimer.MyCountDownTimer(amountTimeMillis, 1000);
                             myCountDownTimer.start();
                         }
                         boolCursor = 0;
@@ -77,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                     counter = 0;
                     boolCursor = 0;
                     myCountDownTimer.cancel();
-                    myCountDownTimer = new MyCountDownTimer(amountTimeMillis, 1000);
+                    myCountDownTimer = new showTimer.MyCountDownTimer(amountTimeMillis, 1000);
                     myCountDownTimer.start();
                     oldCounter = 0;
                 }
